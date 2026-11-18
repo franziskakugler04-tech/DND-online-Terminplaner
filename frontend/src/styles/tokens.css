@@ -1,0 +1,74 @@
+/* ==========================================================
+   CampaignConnect Design Tokens
+   Aus Figma extrahiert: rgb(29,27,32), rgb(233,160,81), 
+   rgb(180,81,39), rgb(45,33,57), rgb(19,16,27), rgb(103,80,164)
+   ========================================================== */
+
+:root {
+  /* Brand core */
+  --cc-orange: #E9A051;       /* rgb(233,160,81)  — Primary accent */
+  --cc-orange-deep: #B45127;  /* rgb(180,81,39)   — Darker accent */
+  --cc-ink: #1D1B20;          /* rgb(29,27,32)    — Primary text */
+  --cc-dark-plum: #2D2139;    /* rgb(45,33,57)    — Header/footer */
+  --cc-dark-night: #13101B;   /* rgb(19,16,27)    — Button dark */
+  --cc-dark-plum-2: #3B3348;  /* slightly lighter */
+  --cc-purple: #6750A4;       /* rgb(103,80,164)  — M3 badge */
+
+  /* Surfaces */
+  --cc-bg: #FFFFFF;
+  --cc-surface: #FFFFFF;
+  --cc-surface-2: #FEF7FF;
+  --cc-border: #A1A1A1;
+  --cc-border-soft: #CAC4D0;
+  --cc-text: var(--cc-ink);
+  --cc-text-soft: #49454F;
+
+  /* Shadow / radius */
+  --cc-radius-sm: 5px;
+  --cc-radius-md: 10px;
+  --cc-radius-lg: 13px;
+  --cc-radius-xl: 16px;
+  --cc-shadow-card: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+  --cc-shadow-pop: 0 10px 30px rgba(29,27,32,.18);
+
+  /* Type — Roboto for UI, Koulen for display/brand */
+  --cc-font: 'Roboto', system-ui, sans-serif;
+  --cc-font-display: 'Koulen', 'Roboto', system-ui, sans-serif;
+
+  /* Layout */
+  --cc-header-h: 76px;
+  --cc-footer-h: 308px;
+
+  /* Accent – switchable via Tweaks (defaults to orange) */
+  --cc-accent: var(--cc-orange);
+  --cc-accent-deep: var(--cc-orange-deep);
+}
+
+[data-theme="dark"] {
+  --cc-bg: #13101B;
+  --cc-surface: #1C1726;
+  --cc-surface-2: #241C31;
+  --cc-border: #3B3348;
+  --cc-border-soft: #3B3348;
+  --cc-text: #F3EEF7;
+  --cc-text-soft: #B9B0C2;
+  --cc-ink: #F3EEF7;
+  --cc-shadow-card: 0 1px 3px rgba(0,0,0,.4);
+}
+
+[data-accent="violet"] {
+  --cc-accent: #8B5CF6;
+  --cc-accent-deep: #6D28D9;
+}
+[data-accent="emerald"] {
+  --cc-accent: #10B981;
+  --cc-accent-deep: #047857;
+}
+[data-accent="rose"] {
+  --cc-accent: #F43F5E;
+  --cc-accent-deep: #BE123C;
+}
+[data-accent="cyan"] {
+  --cc-accent: #06B6D4;
+  --cc-accent-deep: #0E7490;
+}

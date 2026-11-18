@@ -1,0 +1,11 @@
+# Stage 1 – React-App bauen
+FROM node:20-slim AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --omit=dev
+COPY . .
+RUN npm run build
+
+# Stage 2 – nginx liefert die fertigen statischen Dateien aus
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
